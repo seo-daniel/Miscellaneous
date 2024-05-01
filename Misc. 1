@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class HelloWorld {
+class DecimalToBinary {
     public static void main(String[] args) {
         int n = 0;
 
@@ -8,17 +8,22 @@ class HelloWorld {
         Scanner se = new Scanner(System.in);
         int DecimalInput;
         DecimalInput = se.nextInt();
-        int i = 0;
-        int BinaryResult = 0;
         
-        while (BinaryResult>0){
-            BinaryResult = BinaryResult + Math.pow(10, i*(n%2);)
-            n = n/2;
-            i++;
-        }
         
-          System.out.println(BinaryResult);
         
-        }
+        long binaryResult = 0;
+        int remainder, i = 1, step = 1;
+
+        while (DecimalInput!=0) {
+             remainder = DecimalInput % 2;
+             
+                DecimalInput /= 2;
+        
+                binaryResult += remainder * i;
+                i *= 10;
+            }
+            
+            System.out.println(binaryResult);
+            }
     }
 }
